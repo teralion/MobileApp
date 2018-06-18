@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, Platform } from 'react-native';
 
 class SignIn extends Component {
     static propTypes = {
@@ -18,6 +18,7 @@ class SignIn extends Component {
                 <TextInput 
                     value = { this.state.email }
                     onChangeText = { this.handleEmailChange }
+                    styles = { styles.input }
                     keyboardType = "email-address"
                 />
                 <TextInput 
@@ -31,6 +32,20 @@ class SignIn extends Component {
 
     handleEmailChange = (email) => this.setState({ email })
     handlePasswordChange = (password) => this.setState({ password })
+}
+
+const styles = {
+    input: {
+        ...Platform.select({
+            ios: {                        
+                borderBottomWidth: 1,
+                borderBottomColor: '#000',
+            },
+            android: {
+
+            },
+        })
+    },
 }
 
 export default SignIn;

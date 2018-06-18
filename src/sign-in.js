@@ -27,17 +27,8 @@ class SignIn extends Component {
         );
     };
 
-    handleEmailChange = (value) => (
-        this.setState({
-            email: value,
-        });
-    );
-
-    handlePasswordChange = (value) => (
-        this.setState({
-            password: value,
-        });
-    );
+    handleEmailChange = (email) => this.setState({ email });
+    handlePasswordChange = (password) => this.setState({ password });
 };
 
 export default SignIn;

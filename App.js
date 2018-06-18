@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import SignIn from './src/sign-in';
+import SignIn from './src/components/sign-in';
+import HelloWorld from './src/components/hello-world';
 
 export default class App extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+                <HelloWorld />
                 <SignIn />
             </View>
         )

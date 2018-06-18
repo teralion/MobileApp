@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import EventList from './src/components/event-list';
-import fixtures from './fixtures.json';
+import fixtures from './src/fixtures.json';
 
 const events = Object.entries(fixtures.events).map(([uid, event]) => ({ uid, ...event }));
 

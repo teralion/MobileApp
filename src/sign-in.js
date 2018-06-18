@@ -4,12 +4,12 @@ import { View, Text, TextInput } from 'react-native';
 class SignIn extends Component {
     static propTypes = {
 
-    };
+    }
 
     state = {
         email: '',
         password: '',
-    };
+    }
 
     render() {
         return (
@@ -18,17 +18,19 @@ class SignIn extends Component {
                 <TextInput 
                     value = { this.state.email }
                     onChangeText = { this.handleEmailChange }
+                    keyboardType = "email-address"
                 />
                 <TextInput 
                     value = { this.state.password }
                     onChangeText = { this.handlePasswordChange }
+                    secureTextEntry = { true }
                 />
             </View>
-        );
-    };
+        )
+    }
 
-    handleEmailChange = (email) => this.setState({ email });
-    handlePasswordChange = (password) => this.setState({ password });
-};
+    handleEmailChange = (email) => this.setState({ email })
+    handlePasswordChange = (password) => this.setState({ password })
+}
 
 export default SignIn;

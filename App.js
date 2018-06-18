@@ -1,14 +1,15 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import SignIn from './src/components/sign-in';
-import HelloWorld from './src/components/hello-world';
+import EventList from './src/components/event-list';
+import fixtures from './fixtures.json';
+
+const events = Object.entries(fixtures.events).map(([uid, event]) => ({ uid, ...event }));
 
 export default class App extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <HelloWorld />
-                <SignIn />
+            <View style={ styles.container }>
+                <EventList events = { events } />
             </View>
         )
     }

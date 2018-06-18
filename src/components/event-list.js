@@ -9,7 +9,9 @@ class EventList extends Component {
     render() {
         return (
             <View>
-
+                { this.props.events.map((event) => (
+                    <Text key = { event.uid }>{ event.title }</Text>
+                ))}
             </View>
         );
     };

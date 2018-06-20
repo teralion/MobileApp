@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import Card from './common/card';
 
 class EventList extends Component {
     static propTypes = {
@@ -8,11 +9,13 @@ class EventList extends Component {
 
     render() {
         return (
-            <View>
+            <ScrollView>
                 { this.props.events.map((event) => (
-                    <Text key = { event.uid }>{ event.title }</Text>
+                    <Card key = { event.uid }>
+                        <Text>{ event.title }</Text>
+                    </Card>
                 ))}
-            </View>
+            </ScrollView>
         );
     };
 };

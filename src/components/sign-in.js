@@ -18,12 +18,12 @@ class SignIn extends Component {
                 <TextInput 
                     value = { this.state.email }
                     onChangeText = { this.handleEmailChange }
-                    styles = { styles.input }
+                    style = { styles.input }
                     keyboardType = "email-address"
                 />
                 <TextInput 
                     value = { this.state.password }
-                    styles = { styles.input }
+                    style = { styles.input }
                     onChangeText = { this.handlePasswordChange }
                     secureTextEntry = { true }
                 />
@@ -43,7 +43,7 @@ const styles = {
                 borderBottomColor: '#000',
             },
             android: {
-
+                
             },
         })
     },
